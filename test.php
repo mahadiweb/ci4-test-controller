@@ -36,7 +36,7 @@ class Ci4crud extends BaseController
 //             ],
 //         ]);
 
-//     	$this->validate([
+//     	$validated = $this->validate([
 // 	    'username' => 'required|numeric',
 // 	    'password' => 'required|min_length[10]',
 // 	    'passconf' => 'required|matches[password]',
@@ -49,6 +49,9 @@ class Ci4crud extends BaseController
 // 		    ],
 // 	    ],
 // 	]);
+//         if($validated){
+//         echo"yes";
+//         }
 	//$error = $validation->getError('username'); //for error show
 	    
     	$data = array(
