@@ -53,6 +53,7 @@ class Ci4crud extends BaseController
 //         echo"yes";
 //         }
 	//$error = $validation->getError('username'); //for error show
+	    //$imageFile->move("image","css.png"); //move file
 	    
     	$data = array(
     		'name' => $name,
