@@ -24,6 +24,33 @@ class Ci4crud extends BaseController
     	$name = $this->request->getPost('name');
     	$pass = $this->request->getPost('password');
 
+	    
+// 	$validated = $this->validate([
+// 	    'username' => 'required',
+//             'image' => [
+//                 'uploaded[image]',
+//                 'mime_in[image,image/jpg,image/jpeg,image/gif,image/png]', //for image
+//                 'max_size[image,4096]',
+//                 //'is_image[image]',
+//                 //'ext_in[image,pd,png,jpeg]', //for file
+//             ],
+//         ]);
+
+//     	$this->validate([
+// 	    'username' => 'required|numeric',
+// 	    'password' => 'required|min_length[10]',
+// 	    'passconf' => 'required|matches[password]',
+// 	    'email'    => 'required|valid_email',
+// 	    'username' => [
+// 		    'label'  => 'Username',
+// 		    'rules'  => 'required|is_unique[users.username]',
+// 		    'errors' => [
+// 			'required' => 'All accounts must have {field} provided',
+// 		    ],
+// 	    ],
+// 	]);
+	//$error = $validation->getError('username'); //for error show
+	    
     	$data = array(
     		'name' => $name,
     		'password' => $pass
