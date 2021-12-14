@@ -52,7 +52,7 @@ class Ci4crud extends BaseController
 //         if($validated){
 //         echo"yes";
 //         }
-	//$this->validator->hasError('sliderimage') ? $this->validator->getError('sliderimage') : "Image not valid"; //get coustom fild error
+	//$this->validator->hasError('sliderimage') ? $this->validator->getError('sliderimage') : ""; //get coustom fild error
 	//$error = $validation->getError('username'); //for error show
 	//$name = $imageFile->getRandomName(); //get new name
         //$imageFile->move("image",$name);  //move files
