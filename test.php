@@ -45,13 +45,14 @@ class Ci4crud extends BaseController
 // 		    'label'  => 'Username',
 // 		    'rules'  => 'required|is_unique[users.username]',
 // 		    'errors' => [
-// 			'required' => 'All accounts must have {field} provided',
+// 			'required' => 'All accounts must have {field} provided',//set error of any error parameter
 // 		    ],
 // 	    ],
 // 	]);
 //         if($validated){
 //         echo"yes";
 //         }
+	//$this->validator->hasError('sliderimage') ? $this->validator->getError('sliderimage') : "Image not valid"; //get coustom fild error
 	//$error = $validation->getError('username'); //for error show
 	//$name = $imageFile->getRandomName(); //get new name
         //$imageFile->move("image",$name);  //move files
@@ -72,7 +73,7 @@ class Ci4crud extends BaseController
     	//print_r($query);
     }
     public function update(){
-    	$db = \Config\Database::connect();
+    	$db = \Config\Database::connect(); or db_connect();
     	//print_r($_POST);
     	$name = $this->request->getPost('name');
     	$pass = $this->request->getPost('password');
