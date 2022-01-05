@@ -1,16 +1,16 @@
 $routes->setAutoRoute(false); //set auto route true to false for security;
 
-$routes->get('/', 'FrontendController::index');
-$routes->get('about', 'FrontendController::about');
+$routes->get('/', 'AController::index');
+$routes->get('about', 'AController::about');
 
 $routes->group('admin', function($routes){
-	$routes->get('/', 'BackendController::index',['filter'=>'auth']);
-	$routes->get('login', 'BackendController::login');
+	$routes->get('/', 'BController::index',['filter'=>'auth']);
+	$routes->get('login', 'BController::login');
 });
 
 $routes->group('admin', ['filter'=>'auth'],['namespace'=>'App\Controllers\admin'], function($routes){
-	$routes->get('/', 'BackendController::index');
-	$routes->get('login', 'BackendController::login');
+	$routes->get('/', 'BController::index');
+	$routes->get('login', 'BController::login');
 });
 
 $routes->get('/test', function($routes){
