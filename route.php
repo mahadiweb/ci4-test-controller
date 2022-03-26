@@ -13,6 +13,16 @@ $routes->group('admin', ['filter'=>'auth'],['namespace'=>'App\Controllers\admin'
 	$routes->get('login', 'BController::login');
 });
 
-$routes->get('/test', function($routes){
+$routes->get('/test', function(){
 return "hello";
 });
+
+$routes->get('/test', function(){
+return view("test");
+});
+
+$routes->get("service/(:num)", function($id){
+echo "ID".$id
+});   //get num value/paremiter from url. Also can use [(:any),(hash),(alpha),(alphanum),(segment)]
+
+$routes->get("test/(:num)/(:any)", "homecontroller::test/$1/$2");
